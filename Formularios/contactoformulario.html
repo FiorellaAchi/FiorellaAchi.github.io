@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <meta name="Autor" content="FIORELLA ACHI LIMONES">
+    <title>Formulario</title>
+
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        /* El selector body establece el estilo para el cuerpo del documento, en este caso, se utiliza la fuente "Helvetica" y un color de fondo "#bde7ec". */
+        body {
+            font-family: helvetica;
+            background: #bde7ec;
+        }
+
+        /* El selector nav establece el estilo para la barra de navegación. Tiene un color de fondo "#333", un color de texto "#fff", un relleno de 10px y una altura 
+        de 100px. Además, se utiliza la propiedad display: flex para alinear los elementos horizontalmente y align-items: center para centrarlos verticalmente. */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* El selector nav ul se aplica a las listas desordenadas dentro de la barra de navegación y establece márgenes y relleno en 0. */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* El selector nav ul li se aplica a los elementos de lista dentro de la barra de navegación. Los elementos de lista se muestran en línea 
+        y tienen un margen derecho de 20px. */
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        /* El selector nav ul li a se aplica a los enlaces dentro de los elementos de lista de la barra de navegación. Establece un color de texto "#fff",
+         sin subrayado y negrita. */
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* El selector .atras se aplica a un enlace con la clase "atras". Establece un fondo blanco, relleno de 15px, sin subrayado y color de texto negro.
+         Al pasar el cursor sobre él, el fondo se vuelve "#e7e7e7" y el color de texto se vuelve negro. */
+
+        .atras {
+            display: inline-block;
+            background-color: white;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .atras:hover {
+            background-color: #e7e7e7;
+            color: black;
+        }
+
+        /* El selector .aside se aplica a un elemento con la clase "aside". Establece el texto alineado al centro, un tamaño de fuente de 20px, se utiliza display: flex para alinear los
+         elementos horizontalmente y justify-content: center y align-items: center para centrarlos verticalmente. También tiene un ancho del 75%. */
+
+        .aside {
+
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            width: 75%;
+        }
+        /* El selector .section se aplica a un elemento con la clase "section". Establece el texto alineado al centro, un tamaño de fuente de 20px, se utiliza display: flex para alinear los 
+        elementos horizontalmente y justify-content: center y align-items: center para centrarlos verticalmente. También tiene un ancho del 25%. */
+        .section {
+            text-align: center;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            width: 25%;
+
+        }
+
+        /* El selector .form-register se aplica a un formulario con la clase "form-register". Establece un ancho máximo de 800px, un fondo "skyblue", relleno de 30px, márgenes automáticos para centrarlo 
+        en la página, un margen superior de 100px, bordes redondeados y una sombra. Además, se utiliza la fuente "calibri" y un color de texto negro. */
+
+        .form-register {
+            max-width: 800px;
+            background: skyblue;
+            padding: 30px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 4px;
+            font-family: 'calibri';
+            color: rgb(0, 0, 0);
+            box-shadow: 7px 13px 37px #000;
+        }
+
+        /* El selector .form-register h4 se aplica a los encabezados de nivel 4 dentro del formulario. Establece un tamaño de fuente de 30px y un margen inferior de 20px. */
+        .form-register h4 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* El selector .form-register div se aplica a los elementos div dentro del formulario. Establece un fondo "skyblue", relleno de 10px, bordes redondeados, un margen 
+        inferior de 3px, un tamaño de fuente de 18px y un color de texto negro. */
+
+        .form-register div {
+            background: skyblue;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 3px;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+        }
+/* 
+        El selector .controls se aplica a los controles de formulario dentro del formulario. Establece un ancho del 100%, un fondo "skyblue", relleno de 10px, bordes redondeados,
+         un margen inferior de 16px, un borde de 1px sólido y un color de texto negro. */
+        .controls {
+            width: 100%;
+            background: skyblue;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #cddaf5;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+        }
+
+/* 
+        El selector .form-register .botons se aplica a los botones dentro del formulario con la clase "botons". Establece un ancho del 100%, un fondo "#59a4e2", bordes redondeados, 
+        relleno de 12px, color de texto blanco, márgenes de 16px arriba y abajo, y un tamaño de fuente de 16px. */
+       #botons {
+            width: 100%;
+            background: #59a4e2;
+            border-radius: 10%;
+            padding: 12px;
+            color: white;
+            margin: 16px 0;
+            font-size: 16px;
+        }
+
+
+        /* El selector footer establece el estilo para el pie de página. Tiene un color de fondo "#000000", el texto se alinea al centro, el color de texto es blanco, 
+        tiene un margen superior de 50px y se fija en la parte inferior de la página. */
+        footer {
+            background-color: #000000;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-top: 50px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="section">
+                <h4>Menú de navegación</h4>
+            </div>
+            <aside class="aside">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../consultalinea.html">Consulta en linea</a></li>
+                    <li><a href="../PreviaConsulta.html">Agendar cita</a></li>
+                    <li><a href="../nosotros.html">Nosotros</a></li>
+                </ul>
+            </aside>
+        </nav>
+    </header>
+
+    <a href="../nosotros.html" class="atras"> Atras</a>
+
+    <main>
+        <div class="container">
+            <form class="form-register" onsubmit="return validaciones()">
+                <div class="row">
+                    <h4 style="text-align: center"><b>Contactese con nosotros</b></h4>
+
+                    <div class="col-md-6">
+                        <div>
+                            <label><b>Nombres:</b></label>
+                            <input class="controls" type="text" name="nombres" id="nombres"
+                                placeholder="Nombre Completo">
+                            <p></p>
+                        </div>
+                        <div>
+                            <label><b>Telefono:</b></label>
+                            <input class="controls" type="text" name="telefono" id="telefono" placeholder="Telefono">
+                            <p></p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <div>
+                            <label><b>Email:</b></label>
+                            <input class="controls" type="text" name="correo" id="correo"
+                                placeholder="Ingrese su Correo">
+                            <p></p>
+                        </div>
+
+                        <div>
+                            <label><b>Especialidades:</b></label>
+                            <select name="especialidad" class="controls" id="especialidad">
+                                <option value="0">Seleccione..</option>
+                                <option value="1">Cardiologo</option>
+                                <option value="2">Dermatologo</option>
+                                <option value="3">Gastroenterologo</option>
+                                <option value="4">Neurología</option>
+                                <option value="5">otro</option>
+                            </select>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div>
+                        <label><b>Comentarios</b></label>
+                        <textarea class="form-control" rows="4" cols="200" id="texto"  style="resize: none;" placeholder="Ingrese un comentario"></textarea>
+                        <p></p>
+                    </div>
+
+                    <div>
+                        Estas de acuerdo con los <b>Terminos y condiciones</b> <input type="checkbox" name="Check"
+                            value="1" id="check">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input id="botons" type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023 | Consultorio Médico "MedicSur"<br>
+            Hecho by: Fiorella Achi Limones
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var formRegister = document.querySelector(".form-register");
+            formRegister.addEventListener("submit", validaciones);            
+        
+
+            function validaciones(evento) {
+                var nombre = document.getElementById("nombres");
+                var Telefono = document.getElementById("telefono");
+                var email = document.getElementById("correo");
+                var texto = document.getElementById("texto");
+                var especialidad = document.getElementById("especialidad");
+                var check = document.getElementById("check");
+                var valido = true;
+
+                var regex = /^[0-9]{10}$/g;
+                var letra = /^[a-zA-ZÀ-ÿ\s]{1,25}$/;
+                var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+                limpiar();
+
+                //NOMBRE
+                if (nombre.value === "") {
+                    valido = false;
+                    mensaje("Campo obligatorio.*", nombre);
+                } else if (!letra.test(nombre.value)) {
+                    valido = false;
+                    mensaje("Debe contener solo letras.", nombre);
+                } else if (nombre.value.length > 25) {
+                    valido = false;
+                    mensaje("Debe contener máximo 25 caracteres.", nombre);
+                }
+
+                //TELEFONO
+                if (Telefono.value === "") {
+                    valido = false;
+                    mensaje("Campo obligatorio.*", Telefono);
+                } else if (!regex.test(Telefono.value)) {
+                    valido = false;
+                    mensaje("Debe contener 10 digitos.*", Telefono);
+                }
+
+                //CORREO
+                if (email.value === "") {
+                    valido = false;
+                    mensaje("Campo obligatorio.*", email);
+                } else if (!correo.test(email.value)) {
+                    valido = false;
+                    mensaje("El correo no es válido.*", email);
+                }
+
+
+                //ESTADO
+                if (especialidad.value === null || especialidad.value === '0') {
+                    valido = false;
+                    mensaje("Selccione una opción.*", especialidad);
+                }
+
+                //TEXTO
+                if (texto.value === "") {
+                    valido = false;
+                    mensaje("Campo obligatorio.*", texto);
+                } else if (texto.value.length < 25) {
+                    valido = false;
+                    mensaje("Por favor escriba un texto valido.*", texto);
+                }
+
+                //CHECK
+                if (!check.checked) {
+                    valido = false;
+                    mensaje("Campo obligatorio.*", check);
+                }
+
+
+                if (!valido) {
+                    evento.preventDefault();
+                } else {
+                    alert("¡Los datos se han enviado con exito!");
+                    
+                }
+
+            }
+
+            function mensaje(cadena, elemento) {
+                elemento.focus();
+
+                var parrafo;
+                var contenedor = elemento.parentNode;
+                if (elemento.className === "con") {
+                    parrafo = contenedor.children[3];
+                } else {
+                    parrafo = contenedor.children[2];
+                }
+
+                var span = document.createElement("span");
+                span.textContent = cadena;
+                span.setAttribute("class", "elemento1");
+                span.style.color = "red";
+                parrafo.appendChild(span);
+            }
+
+
+            function limpiar() {
+                var elementos = document.querySelectorAll(".elemento1");
+                for (let i = 0; i < elementos.length; i++) {
+                    elementos[i].remove();
+                }
+            }
+        });
+    </script>  
+
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Bonifaz Chacón José Xavier">
+    <title>Información del paciente</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        header h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+    
+        nav {
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+    
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+    
+        nav ul li {
+            margin-right: 10px;
+        }
+    
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        nav ul li a:hover {
+            background-color: #555;
+        }
+    
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+    
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        footer p {
+            margin: 0;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+    
+        .form-container {
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 20px;
+        }
+    
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    
+        input[type="submit"] {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Menú de navegación</h1>
+            <br>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../consultalinea.html">Consulta en línea</a></li>
+                <li><a href="../PreviaConsulta.html">Agendar cita</a></li>
+                <li><a href="../nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mi formulario trata, de "Información del paciente", sirve para que el paciente ingrese su información y la envía a la base de datos del consultorio médico,
+    para que así el paciente pueda ser notificado sobre si la especialidad que se solicita está disponible. -->
+    <section class="container">
+        <h2 style="color: white; background-color: #004173;">Información del Paciente</h2>
+        <div class="form-container">
+            <form id="formulario" novalidate>
+                <div>
+                    <label for="nombre">Nombres y Apellidos:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+    
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" required>
+                </div>
+    
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+    
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+    
+                <div>
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Seleccione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <label>Especialidad:</label>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="especialidad" value="cardiología"> Cardiología
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="especialidad" value="pediatría"> Pediatría
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" name="especialidad" value="obstetricia"> Obstetricia
+                        </label>
+                    </div>
+                </div>
+    
+                <div>
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios"></textarea>
+                </div>
+    
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p class="contact-info">Si necesita programar una cita o tiene alguna pregunta, no dude en ponerse en contacto con nosotros. Estamos aquí para ayudarlo.<br>
+            ¡Contáctenos para programar una cita y recibir la atención que se merece!<br>
+            Contacto: 0962888292<br>
+            Email: medisur1998@outlook.com<br>
+            Derechos de autor © 2023 | Consultorio Médico "MedicSur"<br>
+            Hecho por: Bonifaz Chacón José</p>
+    </footer>
+    
+    <!--Se realizan varias validaciones en los campos de entrada para asegurarse de que se completen correctamente antes de enviar el formulario.-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const formulario = document.getElementById('formulario');
+        
+        // Escucha el evento 'submit' del formulario
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Obtiene los valores de los campos de entrada
+            const nombreInput = document.getElementById('nombre');
+            const edadInput = document.getElementById('edad');
+            const correoInput = document.getElementById('correo');
+            const telefonoInput = document.getElementById('telefono');
+            const generoInput = document.getElementById('genero');
+            const especialidadInputs = document.getElementsByName('especialidad');
+
+            const nombre = nombreInput.value.trim();
+            const edad = edadInput.value.trim();
+            const correo = correoInput.value.trim();
+            const telefono = telefonoInput.value.trim();
+            const genero = generoInput.value;
+            let especialidadSeleccionada = false;
+
+            // Verifica si se ha seleccionado una especialidad
+            for (let i = 0; i < especialidadInputs.length; i++) {
+                    if (especialidadInputs[i].checked) {
+                        especialidadSeleccionada = true;
+                        break;
+                    }
+                }
+
+                // Valida los campos del formulario
+                if (nombre === '') {
+                    alert('Por favor, ingrese los Nombres y Apellidos.');
+                } else if (edad === '') {
+                    alert('Por favor, ingrese la Edad.');
+                } else if (!/^\d+$/.test(edad)) {
+                    alert('Por favor, ingrese solo números en Edad.');
+                } else if (correo === '') {
+                    alert('Por favor, ingrese el Correo electrónico.');
+                } else if (telefono === '') {
+                    alert('Por favor, ingrese el número de Teléfono.');
+                } else if (genero === '') {
+                    alert('Por favor, seleccione el Género.');
+                } else if (!especialidadSeleccionada) {
+                    alert('Por favor, seleccione una Especialidad.');
+                } else {
+                    alert('¡Enviado correctamente!');
+                }
+            });
+        });
+</script>
+</body>
+
+</html>

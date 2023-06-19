@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DOMENICA ORTIZ RAMIREZ">
+    <title>SECCION COMENTARIOS</title>
+    <link rel="stylesheet" href="../css/estiloconsultaenlinea.css">
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #87ceeb;
+        }
+        .formulario {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            text-align: center;
+            color: #000000;
+        }
+
+        form {
+            border: 5px solid #000000;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+
+        }
+        input[type="text"],textarea {
+            width: 96%;
+            padding: 10px;
+            border:3px solid #4e75ea;
+            border-radius: 3px;
+        }
+
+        input[type="submit"],input[type="reset"] {
+            margin-top: 20px;
+            background-color: #353333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type="submit"]:hover,input[type="reset"]:hover {
+            background-color: #3a706981;
+        }
+        #masc,#menos,#rest {
+            font-size: 16px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #000;}
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="contenedorservicio">
+            <a class="servicios" href="../consultalinea.html">Atras</a>
+        </div>
+    </nav>
+    <div class="formulario">
+        <h1>COMENTARIOS</h1>
+        <p id="nodop">
+            <a href="#" id="masc">zoom +</a>
+            <a href="#" id="menos">zoom -</a>
+            <a href="#" id="rest">restaurar</a>
+        </p>
+    
+        <div class="formulariocomentario">
+
+            <form id="formComentario" name="formComentario">
+
+                <div>
+                    <label for="nombres">INGRESE SUS NOMBRES:</label>
+                    <input type="text" name="nombres" id="nombres" class="formItem" >
+                </div>
+
+                <div>
+                    <label for="apellidos">INGRESE SUS APELLIDOS:</label>
+                    <input type="text" name="apellidos" id="apellidos" class="formItem" >
+                </div>
+                <div>
+                    <label>ELIJA SU GÉNERO:</label>
+                    <input class="gen" id="fem" type="radio" name="genero" value="F" >Femenino
+                    <input class="gen" id="mas" type="radio" name="genero" value="M" >Masculino
+                    <input class="gen" id="otro" type="radio" name="genero" value="O" >Otro
+                </div>
+                <div>
+                    <label>INGRESE SU CORREO ELECTRÓNICO</label>
+                    <input type="text" name="correo" id="correo" class="formItem" >
+                </div>
+                <div>
+                    <label>CUÉNTENOS SU EXPERIENCIA</label>
+                    <textarea class="form-control" id="texto" rows="4" cols="50" class="formItem"></textarea>
+                </div>
+                <div class="text-center">
+                    <input type="submit" name="btnEnviar" class="btn btn-primary" value="Enviar">
+                    <input type="reset" class="btn btn-primary" value="Cancelar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <address>
+            <p> Si necesitas programar una cita o tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.
+                ¡Estamos aquí para ayudarte!</p>
+            <p> ¡Contáctanos para programar una cita y recibir la atención que te mereces!</p>
+            <p> Contacto: 0962888292</p>
+            <p> Email: <a href="medisur1998@outlook.com">medisur1998@outlook.com</a></p>
+            <p> Hecho por: <a href="domenica.ortizr@ug.edu.ec">Ortiz Ramirez Domenica</a></p>
+        </address>
+    </footer>
+
+    <script>
+        // Obtener el formulario y agregar un evento de escucha al e
+        var form = document.querySelector("#formComentario");
+        form.addEventListener('submit', validar);
+
+        function validar(event) {
+            var resultado = true;
+            var txtNombres = document.getElementById("nombres");
+            var txtApellidos = document.getElementById("apellidos");
+            var radiosGenero = document.getElementsByName("genero");
+            var txtCorreo = document.getElementById("correo");
+
+            // Expresiones regulares (RegEx)
+            var letra = /^[a-z ,.'-]+$/i; // Letras y espacios
+            var correoe = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+            // Validación de Nombres
+            if (txtNombres.value === '') {
+                resultado = false;
+                mensaje("Nombre es requerido", txtNombres);
+            } else if (!letra.test(txtNombres.value)) {
+                resultado = false;
+                mensaje("Nombre solo debe contener letras", txtNombres);
+            } else if (txtNombres.value.length > 20) {
+                resultado = false;
+                mensaje("Nombre máximo 20 caracteres", txtNombres);
+            }
+
+            // Validación de Apellidos
+            if (txtApellidos.value === '') {
+                resultado = false;
+                mensaje("Apellidos es requerido", txtApellidos);
+            } else if (!letra.test(txtApellidos.value)) {
+                resultado = false;
+                mensaje("Apellidos solo debe contener letras", txtApellidos);
+            } else if (txtApellidos.value.length > 20) {
+                resultado = false;
+                mensaje("Apellidos máximo 20 caracteres", txtApellidos);
+            }
+
+            // Validación de Género
+            var sel = false;
+            for (var i = 0; i < radiosGenero.length; i++) {
+                if (radiosGenero[i].checked) {
+                    sel = true;
+                    break;
+                }
+            }
+            if (!sel) {
+                resultado = false;
+                mensaje("Género es requerido", radiosGenero[0]);
+            }
+
+            // Validación de Correo Electrónico
+            if (txtCorreo.value === '') {
+                resultado = false;
+                mensaje("Correo Electrónico es requerido", txtCorreo);
+            } else if (!correoe.test(txtCorreo.value)) {
+                resultado = false;
+                mensaje("Correo Electrónico inválido", txtCorreo);
+            }
+
+            if (resultado) {
+                alert("Formulario válido, se enviará el comentario");
+            }
+
+            event.preventDefault(); // Evita que se envíe el formulario si hay errores
+        }
+        // Función para mostrar un mensaje de alerta 
+
+        function mensaje(mensaje, elemento) {
+            alert(mensaje);
+            elemento.focus();
+        }
+
+        const formulario = document.querySelector(".formulario");
+        const elementosZoom = formulario.querySelectorAll("label, input[type='text'], textarea");
+
+        // Evento aumentar el tamaño 
+        document.getElementById('masc').addEventListener('click', () => {
+            elementosZoom.forEach(elemento => {
+                const fontSize = window.getComputedStyle(elemento).getPropertyValue('font-size');
+                const currentSize = parseFloat(fontSize);
+                elemento.style.fontSize = (currentSize + 2) + 'px';
+            });
+        });
+         // Evento reducir el tamaño 
+        document.getElementById('menos').addEventListener('click', () => {
+            elementosZoom.forEach(elemento => {
+                const fontSize = window.getComputedStyle(elemento).getPropertyValue('font-size');
+                const currentSize = parseFloat(fontSize);
+                if (currentSize > 8) {
+                    elemento.style.fontSize = (currentSize - 2) + 'px';
+                }
+            });
+        });
+        // Evento  para restablecer
+        document.getElementById('rest').addEventListener('click', () => {
+            elementosZoom.forEach(elemento => {
+                elemento.style.fontSize = '';
+            });
+        });
+    </script>
+</body>
+</html>
