@@ -1,0 +1,128 @@
+body {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+header {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #333;
+    font-size: 32px;
+    margin: 0;
+}
+
+
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+
+}
+
+
+
+section {
+    padding: 20px;
+}
+
+
+
+header,
+section {
+    width: 50%;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+
+nav h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Esto es un selector que selecciona el elemento h2 que está dentro del elemento nav */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+
+nav {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+section ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}

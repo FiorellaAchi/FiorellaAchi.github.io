@@ -1,0 +1,46 @@
+body {
+    background-color: #b6ffff;
+    background-image: url("https://st2.depositphotos.com/2065849/7966/i/450/depositphotos_79664828-stock-photo-medical-and-hospital-corridor-defocused.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    background-color: #004173;
+    color: #fff;
+}
+
+nav {
+    background-color: #004173;
+    color: #fff;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+footer {
+    background-color: #004173;
+    color: #fff;
+}
+
+.contact-info {
+    color: #fff;
+}
+
+.info-paciente-button {
+    background-color: #004173;
+    color: #fff;
+}
+
+.form-container {
+    background-color: #fff;
+}
+
+input[type="submit"] {
+    background-color: #004173;
+    color: #fff;
+}
+
+
