@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <meta name="author" content="Luis Bedoya Jaime">
+    <title>Centro Médico "MedicSur" - Agende una cita con nosotros</title>
+
+    <style>
+    body{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #cabecera{
+        background: #03c4a4;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        padding: 20px;
+        color: #fff;
+    }
+
+    footer{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      margin-top: 50px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      
+    }
+    #menu{
+      position: inherit;
+      margin: 65px;
+      display: block;
+      float: left;
+      clear: both;
+      width: 100%;
+    }
+
+    #botonAgenda{
+        background: #03c4a4;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 8px 15px;
+        border: 2px solid #03c4a4;
+        border-radius: 50px;
+    }
+    #botonAgenda:hover{
+        background-color: white;
+        color:#03c4a4;
+    }
+    
+    h2{
+        font-size: 35px;
+    }
+    h3{
+        color: #03c4a4;
+    }*
+    .principal{
+        padding-bottom: 30px;
+     
+    }
+    .gridContenedor{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap: 10px;
+        padding-bottom: 50px;
+    }
+    .carta .icono{
+        width: 40px;
+    }
+    .carta{
+        text-align: justify;
+        border-top: 2px solid black;
+        padding: 20px;
+        transition: transform 0.3s;
+    }
+    .carta:hover{
+        background-color: #9bd2cb;
+    }
+    </style>
+</head>
+<body>
+ 
+
+    <header>       
+        <nav>
+            <h2>Consultorio médico "MedicSur" | Agenda tu cita ahora</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="consultalinea.html">Consulta en línea</a></li>
+                <li><a href="PreviaConsulta.html">Agendar cita</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main style="margin-top: 200px">
+    <div class="principal">
+        <h2>¿Por qué escoger MedicSur?</h2>
+        <a id="botonAgenda" href="Formularios/AgendarConsulta.html">Agenda tu cita ahora</a>
+   </div>
+    <div class="gridContenedor">
+        <div class="carta" onmouseover="aplicarZoom(this)" onmouseout="quitarZoom(this)">
+            <img src="imagenes/medicine.svg" alt="" class="icono">
+            <h3>Nuestra experiencia</h3>
+            <p>Con más de una década de experiencia, hemos brindado atención excepcional
+                y personalidad a cientos de ecuatorianos. Su salud y bienestar son nuestra máxima prioridad y 
+                nos comprometemos a seguir superando expectativas y brindando un servicio excepcional en cada encuentro. 
+            </p>
+        </div>
+        <div class="carta" onmouseover="aplicarZoom(this)" onmouseout="quitarZoom(this)">
+            <img src="imagenes/health.svg" alt="" class="icono">
+            <h3>Diagnosticos precisos</h3>
+            <p>Reconocemos la importancia de la precisión en el diagnóstico, ya que proporciona la base para el tratamiento 
+                y la planificación de su atención médica. Por ello 
+                Nos esforzamos por brindarle la tranquilidad y confianza necesarias al ofrecerle un diagnóstico detallado y preciso.
+            </p>
+        </div>
+        <div class="carta" onmouseover="aplicarZoom(this)" onmouseout="quitarZoom(this)">
+            <img src="imagenes/doctor.svg" alt="" class="icono">
+            <h3>Personal médico calificado</h3>
+            <p>En MedicSur, nos enorgullece contar con un equipo de especialistas altamente capacitados y tecnología de vanguardia que nos permite ofrecer diagnósticos precisos y confiables.
+                Nuestros profesionales médicos, respaldados por años de experiencia y conocimiento, 
+                analizan minuciosamente cada resultado para brindarle un diagnóstico preciso y completo. 
+                
+            </p>
+        </div>
+        <div class="carta" onmouseover="aplicarZoom(this)" onmouseout="quitarZoom(this)">
+            <img src="imagenes/medicine-box.svg" alt="" class="icono">
+            <h3>Innovación constante</h3>
+            <p>Con más de una década de experiencia, hemos brindado atención excepcional
+                y personalidad a cientos de ecuatorianos. Su salud y bienestar son nuestra máxima prioridad y 
+                nos comprometemos a seguir superando expectativas y brindando un servicio excepcional en cada encuentro. 
+            </p>
+        </div>
+        <footer>
+            <p>Derechos de autor &copy; 2023 | Consultorio Médico "MedicSur"</p>
+          </footer>
+    
+</div>
+</main>
+    <script>
+        function aplicarZoom(elemento){
+            elemento.style.transform = "scale(1.1)";
+        }
+        
+        function quitarZoom(elemento){
+            elemento.style.transform = "scale(1)";
+        }
+
+    </script>
+
+</body>
+</html>

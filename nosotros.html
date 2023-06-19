@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Consultorio Medico</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <meta name="Autor" content="FIORELLA ACHI LIMONES">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        /* Se utiliza el selector universal y la etiqueta body para aplicar el estilo a todos los elementos dentro del body */
+
+        * body {
+            font-family: helvetica;
+            background: #bde7ec;
+
+        }
+
+        /* Este es un identificador único el cual contiene a todas las clases y elementos del mismo */
+
+        #contenedorPrincipal {
+
+            margin: auto;
+            background-color: white;
+            width: 90%;
+            max-width: 1200px;
+            text-align: center;
+            padding: 0px;
+        }
+
+
+
+        /* todo las etiquetas hr tendrán el estilo especificado. */
+        hr {
+            border: 1px solid rgb(0, 0, 0);
+            margin-top: 15px;
+        }
+
+        /* Este es un identificador único el cual contiene a todas las clases y elementos del mismo */
+        #inicio {
+            margin: auto;
+            width: 90%;
+            max-width: 700px;
+            text-align: justify;
+
+        }
+
+        /* Esto es una clase xd */
+        .elemento {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            min-width: 300px;
+            flex: 1;
+        }
+
+        /* La etiqueta h4 es un selector combinado, el cual especifica los cambios en la clase .elemento   */
+
+        .elemento h4 {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 80%;
+            text-align: center;
+            padding: 20px;
+            background-color: skyblue;
+
+        }
+
+        /* Este es un selector combinado, el cual especifica los cambios en la clase .elemento */
+        .elemento h3 {
+            text-align: center;
+        }
+
+        /* esta clase contiene los elementos especificados */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px 30px;
+        }
+
+        /* Clase usada para justificar los textos  */
+        .elemento p {
+            text-align: justify;
+            align-items: center;
+
+        }
+
+        /* Esta es una clase que contiene 2 hijos, siendo .imagen-tm a quien se le realiza los cambios especificados  */
+
+        .elemento .imagen-tm {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Boton que redirige al formulario */
+
+        .form {
+            display: inline-block;
+            background-color: #59a4e2;
+            padding: 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border-radius: 8px;
+        }
+
+        /* Este hover, permite que al pasar el mouse por el botón, cambie el fondo y color de letra */
+        .form:hover {
+            background-color: #e7e7e7;
+            color: black;
+        }
+
+
+
+        /* Esta clase se aplica a un contenedor que contiene las preguntas frecuentes. Establece el ancho del contenedor al 100% y 
+        agrega un borde superior de 0.1px de color #7F7679. También alinea el texto a la izquierda. */
+
+        .question {
+            width: 100%;
+            border-top: 0.1px solid #7F7679;
+            text-align: left;
+        }
+
+        /* Esta clase se aplica a cada caja de pregunta dentro del contenedor de preguntas frecuentes. Define el relleno interno de 15px, el ancho al 100% y el tamaño de fuente de 20px. */
+        .question-box {
+            padding: 15px;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        /* Esta clase se utiliza para agregar un margen izquierdo de 10px al texto dentro de cada caja de pregunta. */
+        .question-box span {
+            margin-left: 10px;
+        }
+
+        /* Esta clase se aplica cuando el cursor se coloca sobre el texto dentro de una caja de pregunta. Establece el cursor del mouse en forma de puntero. */
+        .question-box span:hover {
+            cursor: pointer;
+        }
+
+        /* Esta clase se aplica a cada caja de respuesta dentro del contenedor de preguntas frecuentes. Define el tamaño de fuente de 18px y el ancho al 100%. */
+        .answer-box {
+            font-size: 18px;
+            width: 100%;
+        }
+
+        /* Esta clase se utiliza para aplicar estilos al párrafo de texto dentro de cada caja de respuesta. Agrega un margen izquierdo de 30px y alinea el texto justificado. */
+        .answer-box p {
+            margin-left: 30px;
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>Menú de navegación</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="consultalinea.html">Consulta en línea</a></li>
+                <li><a href="PreviaConsulta.html">Agendar cita</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="contenedorPrincipal">
+            <br>
+            <br>
+            <br>
+
+            <div class="galeria">
+                <div class="elemento">
+                    <img src="img/cumbres.jpg" alt="Consultorio MedicSur" class="imagen-tm">
+                </div>
+            </div>
+
+            <br>
+            <div style="display: flex; justify-content: center; margin: auto; width: 80%; text-align: center; padding: 20px; background-color: skyblue;">
+            <h1><strong> ¿Quiénes somos?</strong></h1>  
+                
+            </div>
+            
+            <div  id="inicio">
+                <br>
+                <p>Somos un centro médico de atención ambulatoria, contamos con profesionales altamente
+                    calificados y especializados,
+                    con una gama de servicios como: análisis clínicos, ecografías e imágenes radiológicas, para
+                    garantizar
+                    la atención
+                    de nuestros pacientes generando confianza y credibilidad en cada uno de ellos.
+                    <br>
+                    <br>
+                    Nos preocupamos siempre en el bienestar de la comunidad y sociedad en general, promoviendo continuas
+                    charlas de prevención y campañas
+                    informativas de las distintas enfermedades que aquejan a la comunidad.
+                </p>
+            </div >
+            <div class="container">
+                <div class="galeria">
+                    <div class="elemento">
+                        <br>
+                        <h4><b>Misión</b></h4>
+                        <br>
+                        <p>Brindar a los pacientes del centro médico atención de primera que se
+                            caracterice por su amabilidad,
+                            cordialidad, calidad, un personal altamente calificado, precios accesibles e instalaciones
+                            modernas
+                            y cómodas.</p>
+                        <br>
+                    </div>
+                    <div class="elemento">
+                        <br>
+                        <h4><b>Visión</b></h4>
+                        <br>
+                        <p>Somos un centro médico reconocido en medicina ocupacional y especializada,
+                            brindando atención de
+                            calidad que permita cubrir todas las necesidades y expectativas de todos nuestros pacientes.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+                <div>
+                    <h1
+                        style="display: flex; justify-content: center; margin: auto; width: 80%; text-align: center; padding: 20px; background-color: skyblue;">
+                        <strong> Nuestras Especialidades</strong></h1>
+                </div>
+                <br>
+                <div class="galeria">
+
+                    <div class="elemento">
+                        <div class="img-teammate">
+                            <img src="img/achiati.jpeg" alt="Cardiólogo" class="imagen-tm">
+                        </div>
+                        <h3><a>Cardiólogo</a></h3>
+                    </div>
+
+                    <div class="elemento">
+                        <div class="img-teammate">
+                            <img src="img/doctor.jpg" alt="Dermatólogo" class="imagen-tm">
+                        </div>
+                        <h3><a>Dermatólogo</a></h3>
+                    </div>
+                </div>
+
+                <div class="galeria">
+                    <div class="elemento">
+                        <div class="img-teammate">
+                            <img src="img/doc.jpeg" alt="Gastroenterólogo" class="imagen-tm">
+                        </div>
+                        <h3><a>Gastroenterólogo</a></h3>
+
+                    </div>
+                    <div class="elemento">
+                        <div class="img-teammate">
+                            <img src="img/doctora.jpeg" alt="Neurología" class="imagen-tm">
+                        </div>
+                        <h3><a>Neurología</a></h3>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <hr>
+
+
+            <div class="questions">
+                <h4 style="font-size: 35px; padding: 15px; color:orange; text-align: left; width: 100%; "><b>Preguntas
+                        Frecuentes</b></h4>
+
+
+
+                <div class="question">
+                    <div class="question-box">
+                        <i class="icon-circle-down"></i><span class="pregunta" id="p0">¿Cuáles son los síntomas comunes
+                            de
+                            enfermedades cardíacas?</span>
+                    </div>
+                    <div class="answer-box">
+
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-box">
+                        <i class="icon-circle-down"></i><span class="pregunta" id="p1">¿Cuáles son los factores de
+                            riesgo
+                            asociados con enfermedades cardíacas?</span>
+                    </div>
+                    <div class="answer-box">
+
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-box">
+                        <i class="icon-circle-down"></i><span class="pregunta" id="p2">¿Qué pruebas diagnósticas se
+                            utilizan
+                            para evaluar la salud del corazón?</span>
+                    </div>
+                    <div class="answer-box">
+
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-box">
+                        <i class="icon-circle-down"></i><span class="pregunta" id="p3">¿Cuáles son los signos de
+                            advertencia
+                            de un posible derrame cerebral?</span>
+                    </div>
+                    <div class="answer-box">
+
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-box">
+                        <i class="icon-circle-down"></i><span class="pregunta" id="p4">¿Cuáles son los trastornos
+                            neuromusculares más comunes y cómo se diagnostican?</span>
+                    </div>
+                    <div class="answer-box">
+
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <br>
+
+
+            <div>
+                <h1><a href="Formularios/contactoformulario.html" class="form">Contáctenos</a></h1>
+                <br>
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <br>
+    <br>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023 | Consultorio Médico "MedicSur"<br>
+            Hecho por: Fiorella Achi Limones
+        </p>
+    </footer>
+
+
+    <script>
+        var preguntas = document.querySelectorAll(".pregunta");
+
+        for (let i = 0; i < preguntas.length; i++) {
+            preguntas[i].addEventListener("click", clickear);
+        }
+
+        function clickear(e) {
+            var div = e.target.parentNode;
+            var contenedor = div.parentNode;
+            var resp = contenedor.children[1];
+
+            if (resp.children.length === 0) {
+                mostrar(e);
+            } else if (resp.children.length > 0) {
+                eliminar(e);
+            }
+        }
+
+        function mostrar(e) {
+            var div = e.target.parentNode;
+            var contenedor = div.parentNode;
+            var resp = contenedor.children[1];
+            var id = e.target.id;
+            var text;
+
+            if (id === "p0") {
+                text = "Los síntomas comunes de enfermedades cardíacas pueden incluir dolor o malestar en el pecho, dificultad para respirar, fatiga inexplicada, palpitaciones y mareos.";
+            } else if (id === "p1") {
+                text = "Algunos de los factores de riesgo asociados con enfermedades cardíacas incluyen hipertensión arterial, colesterol alto, tabaquismo, diabetes, obesidad.";
+            } else if (id === "p2") {
+                text = " Las pruebas diagnósticas utilizadas para evaluar la salud del corazón pueden incluir electrocardiograma (ECG), ecocardiograma, prueba de esfuerzo, análisis de sangre.";
+            } else if (id === "p3") {
+                text = "Los signos de advertencia de un posible derrame cerebral incluyen entumecimiento o debilidad repentina en la cara, brazo o pierna.";
+            } else if (id === "p4") {
+                text = "Algunos trastornos neuromusculares comunes incluyen la enfermedad de Parkinson, la esclerosis múltiple, la enfermedad de Alzheimer y la neuropatía periférica. ";
+            }
+
+            var linea = document.createElement("p");
+            linea.textContent = text;
+            resp.style.padding = "10px";
+            div.style.backgroundColor = "skyblue";
+            div.style.color = "white";
+
+            resp.appendChild(linea);
+        }
+
+        function eliminar(e) {
+            var div = e.target.parentNode;
+            var contenedor = div.parentNode;
+            var resp = contenedor.children[1];
+
+
+            resp.style.padding = "0";
+            div.style.backgroundColor = "white";
+            div.style.color = "#000";
+
+            while (resp.children.length > 0) {
+                resp.removeChild(resp.lastChild);
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
